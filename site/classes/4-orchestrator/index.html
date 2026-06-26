@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><script>document.documentElement.classList.add('js');</script><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>Orchestrator · SEVERMORE</title><meta name="description" content="Army commander who fields a spirit-minion swarm and a deployable turret, rarely fighting directly."><meta property="og:title" content="Orchestrator · SEVERMORE"><meta property="og:description" content="Army commander who fields a spirit-minion swarm and a deployable turret, rarely fighting directly."><meta property="og:image" content="https://severmore-assets.ironops.xyz/assets/north-star/class-4-orchestrator.png"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#06080f"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/BaseLayout.B90kDS6L.css"></head><body><nav class="nav"><div class="nav-inner"><a class="brand" href="/" aria-label="SEVERMORE home"><span class="mark"></span><b>SEVERMORE</b></a><button class="nav-toggle" aria-label="Toggle menu" data-nav-toggle>☰</button><div class="nav-links" data-nav-links><a href="/lore" class>Lore</a><a href="/zones" class>Zones</a><a href="/classes" class="active">Classes</a><a href="/mechanics" class>Mechanics</a><a href="/economy" class>Economy</a><a href="/bestiary" class>Bestiary</a><a href="/endgame" class>Endgame</a><a href="/gallery" class>Gallery</a><a href="/status" class>Status</a><button class="nav-search-btn" data-search-open><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg><span class="lbl">Search</span><kbd>/</kbd></button></div></div></nav><script type="module">var e=document.querySelector(`[data-nav-toggle]`),t=document.querySelector(`[data-nav-links]`);e?.addEventListener(`click`,()=>t?.classList.toggle(`open`));</script><main><header class="entry-hero"><div class="bg" style="background-image:url('https://severmore-assets.ironops.xyz/assets/north-star/class-4-orchestrator.png')"></div><div class="veil"></div><div class="inner"><a class="backlink" href="/classes">← Classes</a><p class="kicker gold" style="margin-top:14px">Five Lenses</p><h1 class="gradient-text">Orchestrator</h1><p class="lede">Army commander who fields a spirit-minion swarm and a deployable turret, rarely fighting directly.</p></div></header><div class="wrap"><div class="entry-grid"><aside class="toc"><div class="toc-h">On this page</div><a href="#_top" class="active">Orchestrator</a><a href="#overview">Overview</a><a href="#weapon--conductor-personal-bolt--swarm-direction">Weapon — Conductor (personal bolt + swarm direction)</a><a href="#abilities">Abilities</a><a href="#survival-model">Survival Model</a><a href="#stat-identity">Stat Identity</a><a href="#skill-tree-paths">Skill Tree Paths</a><a href="#loot-contribution">Loot Contribution</a><a href="#build-note">Build Note</a><a href="#strengths-and-weaknesses">Strengths and Weaknesses</a><div style="margin-top:22px" class="source-tag">Source: CLASS-KITS.md</div></aside><article class="prose" id="_top"><h2 id="overview">Overview</h2>
+<p>The Orchestrator is the army commander — a Summoner/Mechanic hybrid that almost never deals damage personally. Its combat swarm of spirit minions does the killing; the Orchestrator positions, directs, and sustains the army while dropping a stationary turret to anchor a lane. The class maps directly to the AI/LOGOS theme: the Orchestrator is literally <em>orchestrating</em> — managing many reclaimed agents at once.</p>
+<p>It is the most indirect class in the roster and the most positional. A great Orchestrator is always holding a full, well-placed swarm with a turret covering the angle the swarm isn’t. A bad one runs around with a dead swarm and a weak peashooter.</p>
+<p><strong>Source mix:</strong> Summoner + Mechanic.</p>
+<blockquote>
+<p><strong>Note on the Companion:</strong> every class carries a universal <strong>Companion</strong> — an account-bound support pet that heals, scouts, and magnets loot but never fights. The Orchestrator’s combat swarm is entirely separate from the Companion. Minions are transient, numerous, and damage-dealing; the Companion is none of those things.</p>
+</blockquote>
+<hr>
+<h2 id="weapon--conductor-personal-bolt--swarm-direction">Weapon — Conductor (personal bolt + swarm direction)</h2>
+<p>The Orchestrator’s personal auto is intentionally weak:</p>
+<ul>
+<li><strong>Pattern:</strong> a short-range low-damage bolt. The Orchestrator’s actual “primary action” is <strong>directing the swarm</strong>: its aim and facing set a soft <strong>focus target</strong> that the minions prioritize.</li>
+<li><strong>Fire rate:</strong> ~2.5 personal shots per second.</li>
+<li><strong>Damage:</strong> ~6 base per personal shot — the lowest in the roster by design. The swarm’s <strong>aggregate</strong> output (each minion ~5–8 damage per hit, up to 6 minions) far exceeds the Orchestrator’s personal contribution and can out-damage any single class’s personal DPS when spread across targets.</li>
+</ul>
+<p>The Orchestrator is not built around its personal weapon. It is built around what the weapon <em>aims</em>.</p>
+<hr>
+<h2 id="abilities">Abilities</h2>
+<p>Both abilities are <strong>MP/mana-gated</strong>. The Orchestrator has the highest Bandwidth (MP pool) and Refresh (MP regen) in the roster — the ability-cycling class.</p>
+<h3 id="swarm-a1--damage-lane">Swarm (A1 — damage lane)</h3>
+<p><strong>Spawns or refreshes the spirit-minion combat swarm.</strong></p>
+<ul>
+<li>Spawns ~3 spirit minions (up to a cap of ~6 per combat). Each minion lasts ~12 seconds and auto-attacks the nearest enemy, prioritizing the Orchestrator’s focus target.</li>
+<li><strong>Locked twist:</strong> the Orchestrator gains <strong>+~5% DEF (Coherence) per living minion</strong>. A full swarm of 6 grants ~+30% damage reduction. Keeping the swarm alive is simultaneously the damage source <em>and</em> the survivability mechanism.</li>
+<li>At the cap, recasting Swarm <strong>refreshes and enrages</strong> the existing minions rather than spawning new ones.</li>
+<li><strong>MP cost:</strong> ~35.</li>
+</ul>
+<p>Swarm positioning is the core skill. Walking the swarm so minions body-block a boss, surround it, or shield the Orchestrator’s body from projectiles determines both DPS and personal survival. Timing a Swarm cast <em>before</em> a new pack spawns (not reactively after) keeps the army at full strength when it matters.</p>
+<h3 id="turret-a2--control--sustain--mobility-lane">Turret (A2 — control / sustain / mobility lane)</h3>
+<p><strong>Deploy a stationary auto-firing construct.</strong></p>
+<ul>
+<li>Places a turret that fires at ~8 damage per shot at the nearest enemy in range.</li>
+<li>Active for ~10 seconds. One turret may be active at a time.</li>
+<li><strong>MP cost:</strong> ~30.</li>
+</ul>
+<p>The turret is an <strong>anchor</strong> — a fixed damage source that holds a lane, covers a chokepoint, or parks DPS on a spot while the swarm roams. The genre identity (FOUNDATION notes it as a white-space pick) is a summoner class that is <em>also</em> a deployable-anchor class — two distinct positional tools rather than just a raw swarm.</p>
+<p>Optimal Turret placement covers the angle the swarm is <em>not</em> covering: lock down the door the adds pour from while the swarm chases the boss, or anchor the boss’s position while the swarm handles add cleanup.</p>
+<hr>
+<h2 id="survival-model">Survival Model</h2>
+<p><strong>The swarm is the defense.</strong></p>
+<ul>
+<li>Minions <strong>body-block</strong> incoming projectiles and attacks.</li>
+<li>The <strong>+DEF-per-living-minion</strong> buff makes the Orchestrator meaningfully tankier with a full swarm, and softer as the swarm is picked off.</li>
+<li>The turret <strong>zones space</strong> — enemies entering its fire zone take sustained damage and may route around it.</li>
+</ul>
+<p>There is no personal dash. The Orchestrator hides <em>behind its army</em>. Lose the swarm and the Orchestrator is a soft target with rapidly shrinking DEF and a weak peashooter. Keeping the swarm alive is the highest-priority defensive task.</p>
+<hr>
+<h2 id="stat-identity">Stat Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>Identity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bandwidth (MP pool)</strong></td>
+<td>Top in roster — the swarm + turret ability machine</td>
+</tr>
+<tr>
+<td><strong>Refresh (WIS / MP regen)</strong></td>
+<td>Top in roster — keeps abilities fueling the army</td>
+</tr>
+<tr>
+<td><strong>Gain (ATK — personal)</strong></td>
+<td>Lowest in roster by design — the minions carry damage</td>
+</tr>
+<tr>
+<td><strong>Integrity / Coherence</strong></td>
+<td>Low base, compensated by the +DEF-per-minion buff</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="skill-tree-paths">Skill Tree Paths</h2>
+<p>Two per-character trees (lost on death):</p>
+<ul>
+<li><strong>Swarm tree:</strong> Hive Mind (minions inherit a percentage of the Orchestrator’s stats), Sacrifice (consume all living minions for a burst nuke that scales on count), Legion (increase the swarm cap)</li>
+<li><strong>Turret tree:</strong> Fortress (turret HP / range), Overclock (turret fire rate), Mobile (turret follows the Orchestrator rather than being stationary)</li>
+</ul>
+<p>Node names are <strong>OPEN</strong> — path themes are locked, final names are a taste pick.</p>
+<hr>
+<h2 id="loot-contribution">Loot Contribution</h2>
+<p>The Orchestrator earns loot through <strong>damage_dealt</strong> credited for its minions’ and turret’s output, plus <strong>control</strong> events for minion/turret zoning and body-blocking. The contribution system (Threshold + Inspiration) explicitly credits swarm damage to the Orchestrator — it does not need to personally top a damage meter to qualify.</p>
+<hr>
+<h2 id="build-note">Build Note</h2>
+<p>The Orchestrator is the <strong>heaviest kit to build</strong> in the proto order — minion AI, pathing, lifetime/cap management, the deployable turret entity, swarm contribution-crediting, and the +DEF-per-minion hook are all real subsystems. It is designated <strong>build-last</strong> in the prototype sequence. It ships at launch (FOUNDATION L100).</p>
+<hr>
+<h2 id="strengths-and-weaknesses">Strengths and Weaknesses</h2>
+<p><strong>Strengths</strong></p>
+<ul>
+<li>Aggregate swarm + turret DPS can exceed any single class’s personal output at full strength</li>
+<li>+DEF-per-minion gives passive tankiness that scales with army uptime</li>
+<li>Dual positional tools (roaming swarm + fixed turret) cover the entire room</li>
+<li>High Bandwidth/Refresh enables sustained ability cycling</li>
+</ul>
+<p><strong>Weaknesses</strong></p>
+<ul>
+<li>Weakest personal damage in the roster — entirely dependent on the swarm</li>
+<li>Swarm must be actively maintained; a dead swarm means both zero damage and dropping DEF</li>
+<li>No mobility tool — survival depends entirely on army positioning and body-blocking</li>
+<li>The heaviest kit — swarm AI, turret entity, and contribution-crediting are late-prototype systems</li>
+</ul>
+<nav class="pager"><a href="/classes/3-vector"><div class="dir">← Previous</div><div class="ttl">Vector</div></a><a class="next" href="/classes/5-hex"><div class="dir">Next →</div><div class="ttl">Hex</div></a></nav></article></div></div><script type="module">var e=Array.from(document.querySelectorAll(`.toc a`)),t=new Map;e.forEach(e=>{let n=e.getAttribute(`href`)?.replace(`#`,``);n&&t.set(n,e)});var n=Array.from(document.querySelectorAll(`.prose h2[id], .prose h3[id]`));if(n.length){let r=new IntersectionObserver(n=>{for(let r of n)r.isIntersecting&&(e.forEach(e=>e.classList.remove(`active`)),t.get(r.target.id)?.classList.add(`active`))},{rootMargin:`-12% 0px -70% 0px`});n.forEach(e=>r.observe(e))}</script></main><footer class="footer"><div class="footer-inner"><div><div class="f-brand">SEVERMORE</div><p>A 2.5D top-down permadeath bullet-hell MMO with an EVE-grade player-driven economy, set in the AI / PRIME world. This codex is a curated, read-only record of the current canon — open questions are marked <strong>OPEN</strong>, not resolved here.</p></div><div class="f-col"><h4>Codex</h4><a href="/lore">Lore</a><a href="/zones">Zones</a><a href="/classes">Classes</a><a href="/mechanics">Mechanics</a><a href="/gallery">Concept Art</a></div><div class="f-col"><h4>More</h4><a href="/economy">Economy</a><a href="/bestiary">Bestiary</a><a href="/endgame">Endgame</a><a href="/status">Build Status</a><a href="https://severmore-assets.ironops.xyz">Asset Hub ↗</a><a href="https://severmore.ironops.xyz">The Exchange ↗</a></div></div><div class="f-base"><span>SEVERMORE codex · the canon, illustrated · built from the design bible</span><span>Working title · trademark pending · © the dev</span></div></footer><div class="search-modal" data-search-modal><div class="search-box"><div class="sb-head"><span>Search the Codex</span><span>Esc to close</span></div><div class="sb-body"><div id="pagefind-search"></div></div></div></div><script type="module">var e=document.querySelector(`[data-search-modal]`),t=!1;function n(){if(e?.classList.add(`open`),t)setTimeout(()=>e?.querySelector(`input`)?.focus(),30);else{t=!0;let n=document.createElement(`link`);n.rel=`stylesheet`,n.href=`/pagefind/pagefind-ui.css`,document.head.appendChild(n);let r=document.createElement(`script`);r.src=`/pagefind/pagefind-ui.js`,r.onload=()=>{new window.PagefindUI({element:`#pagefind-search`,showSubResults:!0,showImages:!1,resetStyles:!1}),setTimeout(()=>e?.querySelector(`input`)?.focus(),60)},document.body.appendChild(r)}}function r(){e?.classList.remove(`open`)}document.querySelectorAll(`[data-search-open]`).forEach(e=>e.addEventListener(`click`,n)),e?.addEventListener(`click`,t=>{t.target===e&&r()}),document.addEventListener(`keydown`,e=>{e.key===`/`&&!/input|textarea/i.test(e.target?.tagName||``)&&(e.preventDefault(),n()),e.key===`Escape`&&r()});</script><script type="module">var e=document.querySelectorAll(`.reveal`);if(`IntersectionObserver`in window&&e.length){let t=new IntersectionObserver(e=>{for(let n of e)n.isIntersecting&&(n.target.classList.add(`in`),t.unobserve(n.target))},{threshold:.12,rootMargin:`0px 0px -8% 0px`});e.forEach(e=>t.observe(e)),setTimeout(()=>e.forEach(e=>e.classList.add(`in`)),1600)}else e.forEach(e=>e.classList.add(`in`));</script></body></html>

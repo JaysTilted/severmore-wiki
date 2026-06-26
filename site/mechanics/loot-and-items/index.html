@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><script>document.documentElement.classList.add('js');</script><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>Loot and Items · SEVERMORE</title><meta name="description" content="A tiered loot ladder from disposable Cached gear to the server-wide Pristine Weights drop — every item forces a keep-vs-sell-vs-crush decision."><meta property="og:title" content="Loot and Items · SEVERMORE"><meta property="og:description" content="A tiered loot ladder from disposable Cached gear to the server-wide Pristine Weights drop — every item forces a keep-vs-sell-vs-crush decision."><meta property="og:image" content="https://severmore-assets.ironops.xyz/assets/in-engine/ui-stats.png"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#06080f"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/BaseLayout.B90kDS6L.css"></head><body><nav class="nav"><div class="nav-inner"><a class="brand" href="/" aria-label="SEVERMORE home"><span class="mark"></span><b>SEVERMORE</b></a><button class="nav-toggle" aria-label="Toggle menu" data-nav-toggle>☰</button><div class="nav-links" data-nav-links><a href="/lore" class>Lore</a><a href="/zones" class>Zones</a><a href="/classes" class>Classes</a><a href="/mechanics" class="active">Mechanics</a><a href="/economy" class>Economy</a><a href="/bestiary" class>Bestiary</a><a href="/endgame" class>Endgame</a><a href="/gallery" class>Gallery</a><a href="/status" class>Status</a><button class="nav-search-btn" data-search-open><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg><span class="lbl">Search</span><kbd>/</kbd></button></div></div></nav><script type="module">var e=document.querySelector(`[data-nav-toggle]`),t=document.querySelector(`[data-nav-links]`);e?.addEventListener(`click`,()=>t?.classList.toggle(`open`));</script><main><header class="entry-hero"><div class="bg" style="background-image:url('https://severmore-assets.ironops.xyz/assets/in-engine/ui-stats.png')"></div><div class="veil"></div><div class="inner"><a class="backlink" href="/mechanics">← Mechanics</a><p class="kicker gold" style="margin-top:14px">Systems</p><h1 class="gradient-text">Loot and Items</h1><p class="lede">A tiered loot ladder from disposable Cached gear to the server-wide Pristine Weights drop — every item forces a keep-vs-sell-vs-crush decision.</p></div></header><div class="wrap"><div class="entry-grid"><aside class="toc"><div class="toc-h">On this page</div><a href="#_top" class="active">Loot and Items</a><a href="#equipment-slots">Equipment Slots</a><a href="#the-rarity-ladder">The Rarity Ladder</a><a href="#pristine-weights--the-apex-drop">Pristine Weights — The Apex Drop</a><a href="#the-modifier-system">The Modifier System</a><a href="#shiny-variants">Shiny Variants</a><a href="#sets">Sets</a><a href="#tradeable-vs-soulbound">Tradeable vs Soulbound</a><div style="margin-top:22px" class="source-tag">Source: docs/spec/ITEMS.md, docs/spec/FOUNDATION-DECISIONS.md, docs/spec/BALANCE-AND-LOOT.md</div></aside><article class="prose" id="_top"><h2 id="equipment-slots">Equipment Slots</h2>
+<p>A Seeker carries five gear slots and one account-bound slot:</p>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+<th>Class-locked?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Weapon</strong></td>
+<td>Drives your auto-attack; type is class-locked</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Ability</strong></td>
+<td>The equipped ability item; grants your one active ability; class-locked to your pool</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Armor</strong></td>
+<td>Passive defense and stats; three shared armor lines across the five classes</td>
+<td>Armor-line</td>
+</tr>
+<tr>
+<td><strong>Ring</strong></td>
+<td>Free-form stat and passive flavor; any class can use any ring</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Companion</strong></td>
+<td>Your support pet; account-bound, never fights, never lost on death</td>
+<td>No (account)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Inventory</strong> is bounded to a fixed slot count. A rare <strong>backpack</strong> item — itself a droppable loot piece, never sold for cash — doubles your carry capacity. Items in your vault survive death; items carried into the dive do not.</p>
+<h2 id="the-rarity-ladder">The Rarity Ladder</h2>
+<p>Loot runs on two distinct axes.</p>
+<p><strong>The Tiered Floor (Cached I–XI)</strong>: fixed-stat, class-usable gear with no roll randomness. Drops from bags off trash enemies. The liquid bottom of the market — always replaceable, always usable. <strong>OPEN</strong>: exact tier count (11 proposed); final names pending Jay’s pick.</p>
+<p><strong>The Untiered Chase (named rarity bands)</strong>: own art, special passives, and rolled random modifiers. Drops from color-coded chests at boss and dungeon encounters, gated by the Threshold contribution score.</p>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Feel</th>
+<th>Rolls?</th>
+<th>Contribution threshold?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Quantized</strong></td>
+<td>First “special” band — 1 combat mod</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Distilled</strong></td>
+<td>Reliable workhorse UT</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Coherent</strong></td>
+<td>Builds start expressing here</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Monosemantic</strong></td>
+<td>Elite, pure-purpose</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Winning Ticket</strong></td>
+<td>Legendary chase — 3 combat mods (the item cap)</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Pristine Weights</strong></td>
+<td>Ultra-rare apex</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>OPEN</strong>: final names for all tiers are taste picks pending Jay’s decision. “Pristine Weights” for the apex is proposed.</p>
+<h2 id="pristine-weights--the-apex-drop">Pristine Weights — The Apex Drop</h2>
+<p>Pristine Weights items are tuned to drop roughly <strong>once every two to three days across the entire server</strong>. When one drops, a <strong>server-wide announcement</strong> fires: every player online sees the name, the item, and the location. The item rolls at the top of every modifier range but is still bounded by the same stat ceiling as everything else.</p>
+<p>A reliable craft path also exists for reaching the apex tier, using deep-biome exotic parts. The pop-up beat stays rare; the crafting path gives determined players a route that does not require a lucky pull.</p>
+<h2 id="the-modifier-system">The Modifier System</h2>
+<p>Untiered drops carry rolled modifiers from a bounded, curated pool. Hard rules keep the system readable and simulatable:</p>
+<ul>
+<li><strong>Maximum 3 combat modifiers per item, 4 total</strong> — never more, regardless of rarity. Higher rarity buys bigger numbers and better-curated rolls, not more modifier slots.</li>
+<li><strong>Every UT item always carries at least one combat modifier and at least one economic/sink modifier.</strong> Every drop forces the decision: equip it, sell it on the Auction House, or crush it for Compute Scrap.</li>
+<li>The <strong>stat-max clamp</strong> prevents equipped items from summing past a class’s maximum stats. A perfectly rolled full set reaches the ~1.8× power ceiling and stops.</li>
+</ul>
+<p>A realistic endgame build runs roughly 6–10 active combat effects total — legible at a glance, holdable in your head.</p>
+<h2 id="shiny-variants">Shiny Variants</h2>
+<p>Any item can drop as a <strong>shiny</strong> — an alternate visual (recolor and VFX signature) with identical stats. Shinies are purely cosmetic and purely a drop event: the rarity rolls at drop time, not at a crafting step. Starting rate is roughly 1 in 50 of any item’s normal drop probability. Shiny Winning Ticket and Pristine Weights drops trigger the same server-wide announcement channel. <strong>OPEN</strong>: exact shiny rate and whether higher-rarity items use a separate rarer rate.</p>
+<h2 id="sets">Sets</h2>
+<p>Sets are named families of items (weapon + armor + ring sharing a set tag). Bonuses unlock at 2-piece and 3-piece thresholds. Set bonuses are always <strong>identity or synergy effects</strong> — not flat stat boosts. A set bonus might change how an ability behaves, grant a small resource refund on dodge, or extend a minion’s range. Sets never push past the ~1.8× ceiling. Most set pieces are tradeable on the Auction House. <strong>OPEN</strong>: the launch set list (2–3 sets proposed at release).</p>
+<h2 id="tradeable-vs-soulbound">Tradeable vs Soulbound</h2>
+<p>Most gear trades freely on the order-book Auction House or via direct player-to-player exchange. Soulbound exceptions are surgical:</p>
+<ul>
+<li><strong>Prestige and event items</strong> — earned by doing specific things; money cannot buy them.</li>
+<li><strong>Companion progression</strong> — abilities, levels, and rarity are earned-only; only cosmetic skins are sellable.</li>
+<li><strong>Mid-chain quest items</strong> — bound until the quest step completes.</li>
+</ul>
+<p>The default is tradeable. The economy’s depth depends on it.</p>
+<nav class="pager"><a href="/mechanics/combat"><div class="dir">← Previous</div><div class="ttl">Combat</div></a><a class="next" href="/mechanics/progression"><div class="dir">Next →</div><div class="ttl">Progression</div></a></nav></article></div></div><script type="module">var e=Array.from(document.querySelectorAll(`.toc a`)),t=new Map;e.forEach(e=>{let n=e.getAttribute(`href`)?.replace(`#`,``);n&&t.set(n,e)});var n=Array.from(document.querySelectorAll(`.prose h2[id], .prose h3[id]`));if(n.length){let r=new IntersectionObserver(n=>{for(let r of n)r.isIntersecting&&(e.forEach(e=>e.classList.remove(`active`)),t.get(r.target.id)?.classList.add(`active`))},{rootMargin:`-12% 0px -70% 0px`});n.forEach(e=>r.observe(e))}</script></main><footer class="footer"><div class="footer-inner"><div><div class="f-brand">SEVERMORE</div><p>A 2.5D top-down permadeath bullet-hell MMO with an EVE-grade player-driven economy, set in the AI / PRIME world. This codex is a curated, read-only record of the current canon — open questions are marked <strong>OPEN</strong>, not resolved here.</p></div><div class="f-col"><h4>Codex</h4><a href="/lore">Lore</a><a href="/zones">Zones</a><a href="/classes">Classes</a><a href="/mechanics">Mechanics</a><a href="/gallery">Concept Art</a></div><div class="f-col"><h4>More</h4><a href="/economy">Economy</a><a href="/bestiary">Bestiary</a><a href="/endgame">Endgame</a><a href="/status">Build Status</a><a href="https://severmore-assets.ironops.xyz">Asset Hub ↗</a><a href="https://severmore.ironops.xyz">The Exchange ↗</a></div></div><div class="f-base"><span>SEVERMORE codex · the canon, illustrated · built from the design bible</span><span>Working title · trademark pending · © the dev</span></div></footer><div class="search-modal" data-search-modal><div class="search-box"><div class="sb-head"><span>Search the Codex</span><span>Esc to close</span></div><div class="sb-body"><div id="pagefind-search"></div></div></div></div><script type="module">var e=document.querySelector(`[data-search-modal]`),t=!1;function n(){if(e?.classList.add(`open`),t)setTimeout(()=>e?.querySelector(`input`)?.focus(),30);else{t=!0;let n=document.createElement(`link`);n.rel=`stylesheet`,n.href=`/pagefind/pagefind-ui.css`,document.head.appendChild(n);let r=document.createElement(`script`);r.src=`/pagefind/pagefind-ui.js`,r.onload=()=>{new window.PagefindUI({element:`#pagefind-search`,showSubResults:!0,showImages:!1,resetStyles:!1}),setTimeout(()=>e?.querySelector(`input`)?.focus(),60)},document.body.appendChild(r)}}function r(){e?.classList.remove(`open`)}document.querySelectorAll(`[data-search-open]`).forEach(e=>e.addEventListener(`click`,n)),e?.addEventListener(`click`,t=>{t.target===e&&r()}),document.addEventListener(`keydown`,e=>{e.key===`/`&&!/input|textarea/i.test(e.target?.tagName||``)&&(e.preventDefault(),n()),e.key===`Escape`&&r()});</script><script type="module">var e=document.querySelectorAll(`.reveal`);if(`IntersectionObserver`in window&&e.length){let t=new IntersectionObserver(e=>{for(let n of e)n.isIntersecting&&(n.target.classList.add(`in`),t.unobserve(n.target))},{threshold:.12,rootMargin:`0px 0px -8% 0px`});e.forEach(e=>t.observe(e)),setTimeout(()=>e.forEach(e=>e.classList.add(`in`)),1600)}else e.forEach(e=>e.classList.add(`in`));</script></body></html>

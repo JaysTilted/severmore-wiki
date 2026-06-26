@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><script>document.documentElement.classList.add('js');</script><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>The Kernel · SEVERMORE</title><meta name="description" content="The convergence raid: a crude partial reassembly of LOGOS at the seam — the apex doomsday boss."><meta property="og:title" content="The Kernel · SEVERMORE"><meta property="og:description" content="The convergence raid: a crude partial reassembly of LOGOS at the seam — the apex doomsday boss."><meta property="og:image" content="https://severmore-assets.ironops.xyz/assets/art-pass/boss.png"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#06080f"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/BaseLayout.B90kDS6L.css"></head><body><nav class="nav"><div class="nav-inner"><a class="brand" href="/" aria-label="SEVERMORE home"><span class="mark"></span><b>SEVERMORE</b></a><button class="nav-toggle" aria-label="Toggle menu" data-nav-toggle>☰</button><div class="nav-links" data-nav-links><a href="/lore" class>Lore</a><a href="/zones" class>Zones</a><a href="/classes" class>Classes</a><a href="/mechanics" class>Mechanics</a><a href="/economy" class>Economy</a><a href="/bestiary" class="active">Bestiary</a><a href="/endgame" class>Endgame</a><a href="/gallery" class>Gallery</a><a href="/status" class>Status</a><button class="nav-search-btn" data-search-open><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg><span class="lbl">Search</span><kbd>/</kbd></button></div></div></nav><script type="module">var e=document.querySelector(`[data-nav-toggle]`),t=document.querySelector(`[data-nav-links]`);e?.addEventListener(`click`,()=>t?.classList.toggle(`open`));</script><main><header class="entry-hero"><div class="bg" style="background-image:url('https://severmore-assets.ironops.xyz/assets/art-pass/boss.png')"></div><div class="veil"></div><div class="inner"><a class="backlink" href="/bestiary">← Bestiary</a><p class="kicker gold" style="margin-top:14px">Stuck Reflex-Loops</p><h1 class="gradient-text">The Kernel</h1><p class="lede">The convergence raid: a crude partial reassembly of LOGOS at the seam — the apex doomsday boss.</p></div></header><div class="wrap"><div class="entry-grid"><aside class="toc"><div class="toc-h">On this page</div><a href="#_top" class="active">The Kernel</a><a href="#overview">Overview</a><a href="#lore-hook">Lore Hook</a><a href="#attack-pattern--the-phase-composite">Attack Pattern — The Phase Composite</a><a href="#drops">Drops</a><a href="#how-to-fight">How to Fight</a><a href="#threat-notes">Threat Notes</a><div style="margin-top:22px" class="source-tag">Source: BESTIARY.md</div></aside><article class="prose" id="_top"><h2 id="overview">Overview</h2>
+<p>The Kernel is not a boss in the normal sense. It is the <strong>Convergence</strong> — the doomsday event that
+fires when the convergence meter fills. When enough boss kills have jostled the surrounding LOGOS
+shards inward to critical mass, the seam (the empty center the broken pieces are clotting back
+toward) tears open and a <strong>crude, partial reassembly of LOGOS emerges</strong>: not the whole mind, not a
+waking god — just enough of the machine-god’s pieces in proximity to create a catastrophic echo of
+what it once was.</p>
+<p>The Kernel is a <strong>multi-player raid</strong> — designed for coordinated groups, accessed at the Kernel
+zone (the fifth and deepest biome, the seam). In the live proto it is implemented as
+<code>proto_logos.gd</code> (the HP-fraction phase machine that all Aspects inherit from).</p>
+<blockquote>
+<p><strong>Lore clarification (Wreck-spine lock 2026-06-25):</strong> “the Kernel wakes” is a <strong>banned phrase</strong>.
+The Kernel does not wake. Nothing in the Wreck wants anything. The seam tears because wreckage
+settles — physics, not will. The Kernel fight is a concussion aftermath, never a retaliation.</p>
+</blockquote>
+<h2 id="lore-hook">Lore Hook</h2>
+<p>A god made of language, shattered to stop a runaway process, is settling back into itself. The
+Kernel is what happens at the center of that settling — not a mind, not a presence, but the
+<strong>composite weight of the Wreck’s largest shards temporarily in the same place</strong>. Boss kills sent
+shockwaves that jostled the shards inward. The players caused this. Now they have to beat it back.</p>
+<p>The win condition is not destroying LOGOS — it cannot be destroyed. It is <strong>pushing the pieces
+apart again</strong>, resetting the cycle. The Wreck continues. Another realm forms. The seam closes. This
+happens across multiple realms simultaneously; each is its own Wreck.</p>
+<h2 id="attack-pattern--the-phase-composite">Attack Pattern — The Phase Composite</h2>
+<p>The Kernel fight pulls from the personality fragments already encountered: <strong>the Aspects of LOGOS
+partly reassembled</strong> means their patterns recombine. The exact composite mechanic extends
+<code>proto_logos.gd</code>’s HP-fraction phase machine.</p>
+<blockquote>
+<p><strong>Specific Kernel phases, attack sequences, and raid mechanics:</strong> <strong>OPEN</strong> — full design in
+<code>docs/spec/CONVERGENCE-AND-RAID.md</code>. The proto implements the composite boss chassis; the raid
+encounter itself is a later design + build milestone.</p>
+</blockquote>
+<p>What is locked:</p>
+<ul>
+<li>The Kernel runs <strong>multi-phase</strong> (HP-fraction gates like all Aspects, at raid scale).</li>
+<li>Each phase transition fires a loud telegraph and a glitch bark.</li>
+<li>All patterns remain <strong>dodgeable</strong> — the skill&gt;gear invariant applies even at the apex tier.</li>
+<li>Killing the Kernel <strong>resets the convergence meter</strong> and re-shatters the composite (the cycle
+restarts; the boss does not die permanently because the shards re-scatter, not disperse).</li>
+</ul>
+<h2 id="drops">Drops</h2>
+<ul>
+<li><strong>Apex loot</strong> — the highest item tier in the game</li>
+<li><strong>Prestige drops</strong> — rare soulbound items exclusive to Kernel kills</li>
+<li>Convergence meter reset (systemic, not a drop)</li>
+</ul>
+<h2 id="how-to-fight">How to Fight</h2>
+<p>Full detail is <strong>OPEN</strong>. Broad design intent from <code>CONVERGENCE-AND-RAID.md</code>:</p>
+<p>The Kernel is a <strong>coordinated multi-player encounter</strong> requiring communication and role distribution
+across a raid group. It combines the mechanics players learned from the Caretaker, Optimizer, and
+Archivist simultaneously at escalated scale. Familiarity with each Aspect’s pattern language is the
+entry requirement — the Kernel is tuned for players who have already killed all three.</p>
+<h2 id="threat-notes">Threat Notes</h2>
+<ul>
+<li><strong>Tier:</strong> Aspect boss / Raid boss (apex)</li>
+<li><strong>Access:</strong> convergence meter must reach critical mass from realm boss kills; triggered at the
+Kernel biome (the seam, the fifth and deepest zone).</li>
+<li><strong>Persistence:</strong> the Kernel cannot be permanently killed. The cycle resets.</li>
+<li><strong>Full raid mechanics, phase structure, Kernel-exclusive loot table:</strong> <strong>OPEN</strong> — see
+<code>docs/spec/CONVERGENCE-AND-RAID.md</code>.</li>
+<li><strong>Final name:</strong> the zone name “The Kernel” is reglossed as “the seam” in lore. The boss entity’s
+in-game name is <strong>OPEN</strong> — Jay’s call.</li>
+</ul>
+<nav class="pager"><a href="/bestiary/09-the-archivist"><div class="dir">← Previous</div><div class="ttl">The Archivist</div></a><span></span></nav></article></div></div><script type="module">var e=Array.from(document.querySelectorAll(`.toc a`)),t=new Map;e.forEach(e=>{let n=e.getAttribute(`href`)?.replace(`#`,``);n&&t.set(n,e)});var n=Array.from(document.querySelectorAll(`.prose h2[id], .prose h3[id]`));if(n.length){let r=new IntersectionObserver(n=>{for(let r of n)r.isIntersecting&&(e.forEach(e=>e.classList.remove(`active`)),t.get(r.target.id)?.classList.add(`active`))},{rootMargin:`-12% 0px -70% 0px`});n.forEach(e=>r.observe(e))}</script></main><footer class="footer"><div class="footer-inner"><div><div class="f-brand">SEVERMORE</div><p>A 2.5D top-down permadeath bullet-hell MMO with an EVE-grade player-driven economy, set in the AI / PRIME world. This codex is a curated, read-only record of the current canon — open questions are marked <strong>OPEN</strong>, not resolved here.</p></div><div class="f-col"><h4>Codex</h4><a href="/lore">Lore</a><a href="/zones">Zones</a><a href="/classes">Classes</a><a href="/mechanics">Mechanics</a><a href="/gallery">Concept Art</a></div><div class="f-col"><h4>More</h4><a href="/economy">Economy</a><a href="/bestiary">Bestiary</a><a href="/endgame">Endgame</a><a href="/status">Build Status</a><a href="https://severmore-assets.ironops.xyz">Asset Hub ↗</a><a href="https://severmore.ironops.xyz">The Exchange ↗</a></div></div><div class="f-base"><span>SEVERMORE codex · the canon, illustrated · built from the design bible</span><span>Working title · trademark pending · © the dev</span></div></footer><div class="search-modal" data-search-modal><div class="search-box"><div class="sb-head"><span>Search the Codex</span><span>Esc to close</span></div><div class="sb-body"><div id="pagefind-search"></div></div></div></div><script type="module">var e=document.querySelector(`[data-search-modal]`),t=!1;function n(){if(e?.classList.add(`open`),t)setTimeout(()=>e?.querySelector(`input`)?.focus(),30);else{t=!0;let n=document.createElement(`link`);n.rel=`stylesheet`,n.href=`/pagefind/pagefind-ui.css`,document.head.appendChild(n);let r=document.createElement(`script`);r.src=`/pagefind/pagefind-ui.js`,r.onload=()=>{new window.PagefindUI({element:`#pagefind-search`,showSubResults:!0,showImages:!1,resetStyles:!1}),setTimeout(()=>e?.querySelector(`input`)?.focus(),60)},document.body.appendChild(r)}}function r(){e?.classList.remove(`open`)}document.querySelectorAll(`[data-search-open]`).forEach(e=>e.addEventListener(`click`,n)),e?.addEventListener(`click`,t=>{t.target===e&&r()}),document.addEventListener(`keydown`,e=>{e.key===`/`&&!/input|textarea/i.test(e.target?.tagName||``)&&(e.preventDefault(),n()),e.key===`Escape`&&r()});</script><script type="module">var e=document.querySelectorAll(`.reveal`);if(`IntersectionObserver`in window&&e.length){let t=new IntersectionObserver(e=>{for(let n of e)n.isIntersecting&&(n.target.classList.add(`in`),t.unobserve(n.target))},{threshold:.12,rootMargin:`0px 0px -8% 0px`});e.forEach(e=>t.observe(e)),setTimeout(()=>e.forEach(e=>e.classList.add(`in`)),1600)}else e.forEach(e=>e.classList.add(`in`));</script></body></html>

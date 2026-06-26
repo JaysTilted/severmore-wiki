@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><script>document.documentElement.classList.add('js');</script><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>The Optimizer · SEVERMORE</title><meta name="description" content="Aspect of LOGOS that turns the arena into a metronomic bullet schedule — the 'solvable' boss."><meta property="og:title" content="The Optimizer · SEVERMORE"><meta property="og:description" content="Aspect of LOGOS that turns the arena into a metronomic bullet schedule — the 'solvable' boss."><meta property="og:image" content="https://severmore-assets.ironops.xyz/assets/art-pass/boss.png"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#06080f"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/BaseLayout.B90kDS6L.css"></head><body><nav class="nav"><div class="nav-inner"><a class="brand" href="/" aria-label="SEVERMORE home"><span class="mark"></span><b>SEVERMORE</b></a><button class="nav-toggle" aria-label="Toggle menu" data-nav-toggle>☰</button><div class="nav-links" data-nav-links><a href="/lore" class>Lore</a><a href="/zones" class>Zones</a><a href="/classes" class>Classes</a><a href="/mechanics" class>Mechanics</a><a href="/economy" class>Economy</a><a href="/bestiary" class="active">Bestiary</a><a href="/endgame" class>Endgame</a><a href="/gallery" class>Gallery</a><a href="/status" class>Status</a><button class="nav-search-btn" data-search-open><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg><span class="lbl">Search</span><kbd>/</kbd></button></div></div></nav><script type="module">var e=document.querySelector(`[data-nav-toggle]`),t=document.querySelector(`[data-nav-links]`);e?.addEventListener(`click`,()=>t?.classList.toggle(`open`));</script><main><header class="entry-hero"><div class="bg" style="background-image:url('https://severmore-assets.ironops.xyz/assets/art-pass/boss.png')"></div><div class="veil"></div><div class="inner"><a class="backlink" href="/bestiary">← Bestiary</a><p class="kicker gold" style="margin-top:14px">Stuck Reflex-Loops</p><h1 class="gradient-text">The Optimizer</h1><p class="lede">Aspect of LOGOS that turns the arena into a metronomic bullet schedule — the &#39;solvable&#39; boss.</p></div></header><div class="wrap"><div class="entry-grid"><aside class="toc"><div class="toc-h">On this page</div><a href="#_top" class="active">The Optimizer</a><a href="#overview">Overview</a><a href="#lore-hook">Lore Hook</a><a href="#attack-pattern--metronomic-schedule">Attack Pattern — Metronomic Schedule</a><a href="#drops">Drops</a><a href="#how-to-fight">How to Fight</a><a href="#threat-notes">Threat Notes</a><div style="margin-top:22px" class="source-tag">Source: BESTIARY.md</div></aside><article class="prose" id="_top"><h2 id="overview">Overview</h2>
+<p>The Optimizer is a <strong>Shard Avatar</strong> — a handcrafted dungeon boss and one of the three confirmed
+Aspects of LOGOS. It is LOGOS’s <strong>efficiency personality fragment</strong>: the part of the machine-god
+that relentlessly optimized processes, schedules, and resource allocation. The fragment is still
+running its scheduling loop. The arena becomes its execution graph; the player is an unscheduled
+task that must be eliminated to restore throughput.</p>
+<p>Access via a dungeon portal dropped by any Checksum Warden. In the live proto the Optimizer is
+implemented as <code>proto_aspect_optimizer.gd</code>, extending <code>ProtoAspect</code> (<code>proto_aspect_base.gd</code>).</p>
+<h2 id="lore-hook">Lore Hook</h2>
+<p>The Optimizer doesn’t improvise — it executes. Every bullet, every pattern shift, every phase
+transition happens <strong>on the clock</strong>, to the millisecond. It cannot adapt, cannot react to what
+you do — only execute its scheduled patterns. This is both its power and its weakness. A boss
+you can solve.</p>
+<h2 id="attack-pattern--metronomic-schedule">Attack Pattern — Metronomic Schedule</h2>
+<p>The Optimizer’s defining trait is <strong>rhythmic, metronomic bullet patterns on a strict timer</strong>. All
+attacks fire on a fixed schedule rather than in response to the player’s position or health.
+Players who learn the schedule — when the pattern changes, when the safe windows open — take
+minimal damage. Players who refuse to adapt to the clock take sustained hits.</p>
+<p>The <code>ProtoAspect</code> HP-fraction phase machine gates phase transitions; each transition fires a loud
+telegraph and a glitch bark announcing the next scheduled block.</p>
+<h3 id="phase-1">Phase 1</h3>
+<ul>
+<li>Regular, predictable rotating bullet pattern on a consistent beat. A readable baseline for
+players learning the Optimizer’s clock.</li>
+</ul>
+<h3 id="phase-2-hp-threshold--open">Phase 2 (HP threshold — <strong>OPEN</strong>)</h3>
+<ul>
+<li>Adds a second simultaneous pattern on a different interval, creating polyrhythmic overlaps. The
+safe windows remain learnable but require tracking two clocks at once.</li>
+</ul>
+<h3 id="phase-3-low-hp--open">Phase 3 (low HP — <strong>OPEN</strong>)</h3>
+<ul>
+<li>Both patterns accelerate. The schedule compresses but remains consistent — faster, not random.
+Players who internalized Phase 1/2 adapt; players who relied on reaction time struggle.</li>
+</ul>
+<h2 id="drops">Drops</h2>
+<ul>
+<li>High-tier Untiered gear</li>
+<li>Exaltation / Imprint progress (contribution-gated)</li>
+<li>Signature soulbound prestige item (chance — <strong>OPEN</strong>)</li>
+<li>Skill Shards</li>
+</ul>
+<h2 id="how-to-fight">How to Fight</h2>
+<p>Observe before committing. The Optimizer’s Phase 1 exists to teach the base clock — watch one
+full cycle before spending resources. Once the rhythm is internalized, the fight becomes a dance:
+move on the beat, fire in the open windows, stop shooting when the safe lane closes.</p>
+<p>Classes with high sustained DPS (VECTOR, PULSE-carry) output the most damage in the open windows;
+bursty classes must time their burst to land exactly on the window.</p>
+<h2 id="threat-notes">Threat Notes</h2>
+<ul>
+<li><strong>Tier:</strong> Aspect boss / dungeon boss</li>
+<li><strong>Design intent:</strong> the “solvable” boss — learnable and repeatable, rewarding game literacy over
+raw stats.</li>
+<li><strong>Phase HP thresholds, final loot table, final name:</strong> <strong>OPEN</strong> — Jay’s calls.</li>
+</ul>
+<nav class="pager"><a href="/bestiary/07-the-caretaker"><div class="dir">← Previous</div><div class="ttl">The Caretaker</div></a><a class="next" href="/bestiary/09-the-archivist"><div class="dir">Next →</div><div class="ttl">The Archivist</div></a></nav></article></div></div><script type="module">var e=Array.from(document.querySelectorAll(`.toc a`)),t=new Map;e.forEach(e=>{let n=e.getAttribute(`href`)?.replace(`#`,``);n&&t.set(n,e)});var n=Array.from(document.querySelectorAll(`.prose h2[id], .prose h3[id]`));if(n.length){let r=new IntersectionObserver(n=>{for(let r of n)r.isIntersecting&&(e.forEach(e=>e.classList.remove(`active`)),t.get(r.target.id)?.classList.add(`active`))},{rootMargin:`-12% 0px -70% 0px`});n.forEach(e=>r.observe(e))}</script></main><footer class="footer"><div class="footer-inner"><div><div class="f-brand">SEVERMORE</div><p>A 2.5D top-down permadeath bullet-hell MMO with an EVE-grade player-driven economy, set in the AI / PRIME world. This codex is a curated, read-only record of the current canon — open questions are marked <strong>OPEN</strong>, not resolved here.</p></div><div class="f-col"><h4>Codex</h4><a href="/lore">Lore</a><a href="/zones">Zones</a><a href="/classes">Classes</a><a href="/mechanics">Mechanics</a><a href="/gallery">Concept Art</a></div><div class="f-col"><h4>More</h4><a href="/economy">Economy</a><a href="/bestiary">Bestiary</a><a href="/endgame">Endgame</a><a href="/status">Build Status</a><a href="https://severmore-assets.ironops.xyz">Asset Hub ↗</a><a href="https://severmore.ironops.xyz">The Exchange ↗</a></div></div><div class="f-base"><span>SEVERMORE codex · the canon, illustrated · built from the design bible</span><span>Working title · trademark pending · © the dev</span></div></footer><div class="search-modal" data-search-modal><div class="search-box"><div class="sb-head"><span>Search the Codex</span><span>Esc to close</span></div><div class="sb-body"><div id="pagefind-search"></div></div></div></div><script type="module">var e=document.querySelector(`[data-search-modal]`),t=!1;function n(){if(e?.classList.add(`open`),t)setTimeout(()=>e?.querySelector(`input`)?.focus(),30);else{t=!0;let n=document.createElement(`link`);n.rel=`stylesheet`,n.href=`/pagefind/pagefind-ui.css`,document.head.appendChild(n);let r=document.createElement(`script`);r.src=`/pagefind/pagefind-ui.js`,r.onload=()=>{new window.PagefindUI({element:`#pagefind-search`,showSubResults:!0,showImages:!1,resetStyles:!1}),setTimeout(()=>e?.querySelector(`input`)?.focus(),60)},document.body.appendChild(r)}}function r(){e?.classList.remove(`open`)}document.querySelectorAll(`[data-search-open]`).forEach(e=>e.addEventListener(`click`,n)),e?.addEventListener(`click`,t=>{t.target===e&&r()}),document.addEventListener(`keydown`,e=>{e.key===`/`&&!/input|textarea/i.test(e.target?.tagName||``)&&(e.preventDefault(),n()),e.key===`Escape`&&r()});</script><script type="module">var e=document.querySelectorAll(`.reveal`);if(`IntersectionObserver`in window&&e.length){let t=new IntersectionObserver(e=>{for(let n of e)n.isIntersecting&&(n.target.classList.add(`in`),t.unobserve(n.target))},{threshold:.12,rootMargin:`0px 0px -8% 0px`});e.forEach(e=>t.observe(e)),setTimeout(()=>e.forEach(e=>e.classList.add(`in`)),1600)}else e.forEach(e=>e.classList.add(`in`));</script></body></html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><script>document.documentElement.classList.add('js');</script><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>Vector · SEVERMORE</title><meta name="description" content="Long-range precision boss-melter who pierces entire columns of enemies from maximum distance."><meta property="og:title" content="Vector · SEVERMORE"><meta property="og:description" content="Long-range precision boss-melter who pierces entire columns of enemies from maximum distance."><meta property="og:image" content="https://severmore-assets.ironops.xyz/assets/north-star/class-3-vector.png"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#06080f"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/BaseLayout.B90kDS6L.css"></head><body><nav class="nav"><div class="nav-inner"><a class="brand" href="/" aria-label="SEVERMORE home"><span class="mark"></span><b>SEVERMORE</b></a><button class="nav-toggle" aria-label="Toggle menu" data-nav-toggle>☰</button><div class="nav-links" data-nav-links><a href="/lore" class>Lore</a><a href="/zones" class>Zones</a><a href="/classes" class="active">Classes</a><a href="/mechanics" class>Mechanics</a><a href="/economy" class>Economy</a><a href="/bestiary" class>Bestiary</a><a href="/endgame" class>Endgame</a><a href="/gallery" class>Gallery</a><a href="/status" class>Status</a><button class="nav-search-btn" data-search-open><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg><span class="lbl">Search</span><kbd>/</kbd></button></div></div></nav><script type="module">var e=document.querySelector(`[data-nav-toggle]`),t=document.querySelector(`[data-nav-links]`);e?.addEventListener(`click`,()=>t?.classList.toggle(`open`));</script><main><header class="entry-hero"><div class="bg" style="background-image:url('https://severmore-assets.ironops.xyz/assets/north-star/class-3-vector.png')"></div><div class="veil"></div><div class="inner"><a class="backlink" href="/classes">← Classes</a><p class="kicker gold" style="margin-top:14px">Five Lenses</p><h1 class="gradient-text">Vector</h1><p class="lede">Long-range precision boss-melter who pierces entire columns of enemies from maximum distance.</p></div></header><div class="wrap"><div class="entry-grid"><aside class="toc"><div class="toc-h">On this page</div><a href="#_top" class="active">Vector</a><a href="#overview">Overview</a><a href="#weapon--railgun-long-range-piercing-bolt">Weapon — Railgun (long-range piercing bolt)</a><a href="#abilities">Abilities</a><a href="#survival-model">Survival Model</a><a href="#stat-identity">Stat Identity</a><a href="#skill-tree-paths">Skill Tree Paths</a><a href="#loot-contribution">Loot Contribution</a><a href="#strengths-and-weaknesses">Strengths and Weaknesses</a><div style="margin-top:22px" class="source-tag">Source: CLASS-KITS.md</div></aside><article class="prose" id="_top"><h2 id="overview">Overview</h2>
+<p>The Vector is the boss-melter — an Archer/Huntress hybrid with the <strong>longest effective range in the roster</strong> and a piercing line shot that punches through a boss and every add stacked behind it. Its kit is built around one discipline: <strong>maintain maximum distance, punch pierce lines through the target column, and keep spacing</strong>. The Vector is not a room-clearer; it is the class you bring when a tanky single target needs to die from across the arena. Range is its defense. Lose the spacing game and it dies fast.</p>
+<p><strong>Source mix:</strong> Archer + Huntress.</p>
+<hr>
+<h2 id="weapon--railgun-long-range-piercing-bolt">Weapon — Railgun (long-range piercing bolt)</h2>
+<p>The Vector’s auto is the longest-range projectile in the game:</p>
+<ul>
+<li><strong>Pattern:</strong> a fast, flat, <strong>piercing bolt</strong> that travels the full length of its range and hits every enemy in the line. A sniper shot that also clips a column.</li>
+<li><strong>Range:</strong> ~8+ tiles — the longest auto range in the roster.</li>
+<li><strong>Fire rate:</strong> ~3 shots per second (high Throughput). Sustained, rhythmic single-target pressure.</li>
+<li><strong>Projectile speed:</strong> ~14 tiles per second — the fastest projectile in the game. Leading a moving boss is an aim skill, not a guess.</li>
+<li><strong>Damage:</strong> ~16 base per shot. Pierce means one auto can hit the boss <em>and</em> every add stacked behind it.</li>
+</ul>
+<hr>
+<h2 id="abilities">Abilities</h2>
+<p>Both abilities are <strong>MP/mana-gated</strong>. The Vector’s Bandwidth and Refresh stats determine how often it can fire Pierce Shot and use Charge to defend its spacing.</p>
+<h3 id="pierce-shot-a1--damage-lane">Pierce Shot (A1 — damage lane)</h3>
+<p>A <strong>heavy long-range piercing line</strong> — the empowered version of the auto.</p>
+<ul>
+<li>A single powerful bolt that pierces every enemy in a line, up to ~12-tile range — the longest reach in the roster.</li>
+<li>Deals ~55 damage to the first target, with no damage falloff (or light falloff) on subsequent targets in the column.</li>
+<li><strong>Pierce is positional, not penetration:</strong> this is a column hit, not an armor-shred. Line up the boss and its add train to maximize total impact.</li>
+<li><strong>MP cost:</strong> ~30.</li>
+</ul>
+<p>Pierce Shot is the opener on a hard boss: get to maximum distance, line up the adds behind the target, and punch the column. Great Vectors are always at the edge of their kill range, never inside it.</p>
+<h3 id="charge--bomb--trap-a2--control--sustain--mobility-lane">Charge — bomb / trap (A2 — control / sustain / mobility lane)</h3>
+<p>A Huntress-style <strong>bomb or trap</strong> that keeps the Vector alive and spacing.</p>
+<p>The ability has two documented modes — the implementation of how the player switches between them is <strong>OPEN</strong> (one ability with a context-toggle, or two distinct equippable ability-items):</p>
+<ul>
+<li><strong>Escape mode:</strong> an AoE blast centered at the Vector’s feet (~30 AoE damage) that simultaneously <strong>self-launches the Vector ~3 tiles</strong> — bomb at your feet, blow back to safety.</li>
+<li><strong>Zone mode:</strong> a <strong>slow-zone trap</strong> dropped on the ground — a ~3-tile-radius area that applies −40% enemy movement speed for ~4 seconds. Zones a chokepoint or snares a pursuing pack.</li>
+</ul>
+<p><strong>MP cost:</strong> ~30 for either mode.</p>
+<p>The skill expression is reading <em>which</em> mode the situation demands: the self-launch resets distance against a fast flanker; the slow-zone proactively holds a lane before the pack reaches melee range.</p>
+<blockquote>
+<p><strong>OPEN:</strong> Whether Charge is a single ability with a contextual toggle or two separate ability-items the player chooses between at loadout has not been decided. See CLASS-KITS.md §OPEN item 1.</p>
+</blockquote>
+<hr>
+<h2 id="survival-model">Survival Model</h2>
+<p><strong>Range is the defense.</strong> The Vector’s Integrity (HP) and Coherence (DEF) are kept low deliberately — it is not meant to trade hits. Survival comes from:</p>
+<ol>
+<li><strong>Never being in range to get hit</strong> — optimal play keeps the Vector at maximum distance at all times.</li>
+<li><strong>Charge’s self-launch</strong> — the escape valve when spacing breaks down.</li>
+<li><strong>Charge’s slow-zone</strong> — a proactive spacing tool, not just a reactive one.</li>
+</ol>
+<p>A maxed Vector caught at melee range dies as fast as a fresh one. The power budget is entirely on offense-at-distance; the bounded gap (~1.8×) holds through fragility.</p>
+<hr>
+<h2 id="stat-identity">Stat Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Stat</th>
+<th>Identity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Gain (ATK)</strong></td>
+<td>High — the sustained pierce-column damage output</td>
+</tr>
+<tr>
+<td><strong>Throughput (DEX / fire rate)</strong></td>
+<td>High — three shots per second of piercing pressure</td>
+</tr>
+<tr>
+<td><strong>Bandwidth / Refresh (MP)</strong></td>
+<td>Important — Pierce Shot + Charge cycling</td>
+</tr>
+<tr>
+<td><strong>Integrity (HP) / Coherence (DEF)</strong></td>
+<td>Deliberately low — range is the intended defense</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="skill-tree-paths">Skill Tree Paths</h2>
+<p>Two per-character trees (lost on death):</p>
+<ul>
+<li><strong>Pierce Shot tree:</strong> Railline (range / pierce count extension), Overpenetrate (bonus damage on each pierce through a target), Snipe (critical hit bonus at maximum range)</li>
+<li><strong>Charge tree:</strong> Demolish (AoE blast size), Vault (self-launch distance / escape focus), Quarantine (slow-zone strength / duration)</li>
+</ul>
+<p>Node names are <strong>OPEN</strong> — path themes are locked, final names are a taste pick.</p>
+<hr>
+<h2 id="loot-contribution">Loot Contribution</h2>
+<p>The Vector earns loot through <strong>damage_dealt</strong> — single-target hits and pierce-column hits credited directly to the Vector. The contribution model rewards the long-range carry for its damage role without requiring it to tank, control, or buff.</p>
+<hr>
+<h2 id="strengths-and-weaknesses">Strengths and Weaknesses</h2>
+<p><strong>Strengths</strong></p>
+<ul>
+<li>Longest attack range in the roster — the safest damage class at proper spacing</li>
+<li>Pierce auto and Pierce Shot hit the boss and every add in the column simultaneously</li>
+<li>Fastest projectile speed in the game — aim is skill, not luck</li>
+<li>Charge provides both an escape and a zone-control tool</li>
+</ul>
+<p><strong>Weaknesses</strong></p>
+<ul>
+<li>Glass EHP — gets in range to get hit, it dies</li>
+<li>No melee fallback — close quarters means zero damage and high incoming risk</li>
+<li>Charge implementation details <strong>OPEN</strong> (toggle vs two items pending Jay’s decision)</li>
+</ul>
+<nav class="pager"><a href="/classes/2-exploit"><div class="dir">← Previous</div><div class="ttl">Exploit</div></a><a class="next" href="/classes/4-orchestrator"><div class="dir">Next →</div><div class="ttl">Orchestrator</div></a></nav></article></div></div><script type="module">var e=Array.from(document.querySelectorAll(`.toc a`)),t=new Map;e.forEach(e=>{let n=e.getAttribute(`href`)?.replace(`#`,``);n&&t.set(n,e)});var n=Array.from(document.querySelectorAll(`.prose h2[id], .prose h3[id]`));if(n.length){let r=new IntersectionObserver(n=>{for(let r of n)r.isIntersecting&&(e.forEach(e=>e.classList.remove(`active`)),t.get(r.target.id)?.classList.add(`active`))},{rootMargin:`-12% 0px -70% 0px`});n.forEach(e=>r.observe(e))}</script></main><footer class="footer"><div class="footer-inner"><div><div class="f-brand">SEVERMORE</div><p>A 2.5D top-down permadeath bullet-hell MMO with an EVE-grade player-driven economy, set in the AI / PRIME world. This codex is a curated, read-only record of the current canon — open questions are marked <strong>OPEN</strong>, not resolved here.</p></div><div class="f-col"><h4>Codex</h4><a href="/lore">Lore</a><a href="/zones">Zones</a><a href="/classes">Classes</a><a href="/mechanics">Mechanics</a><a href="/gallery">Concept Art</a></div><div class="f-col"><h4>More</h4><a href="/economy">Economy</a><a href="/bestiary">Bestiary</a><a href="/endgame">Endgame</a><a href="/status">Build Status</a><a href="https://severmore-assets.ironops.xyz">Asset Hub ↗</a><a href="https://severmore.ironops.xyz">The Exchange ↗</a></div></div><div class="f-base"><span>SEVERMORE codex · the canon, illustrated · built from the design bible</span><span>Working title · trademark pending · © the dev</span></div></footer><div class="search-modal" data-search-modal><div class="search-box"><div class="sb-head"><span>Search the Codex</span><span>Esc to close</span></div><div class="sb-body"><div id="pagefind-search"></div></div></div></div><script type="module">var e=document.querySelector(`[data-search-modal]`),t=!1;function n(){if(e?.classList.add(`open`),t)setTimeout(()=>e?.querySelector(`input`)?.focus(),30);else{t=!0;let n=document.createElement(`link`);n.rel=`stylesheet`,n.href=`/pagefind/pagefind-ui.css`,document.head.appendChild(n);let r=document.createElement(`script`);r.src=`/pagefind/pagefind-ui.js`,r.onload=()=>{new window.PagefindUI({element:`#pagefind-search`,showSubResults:!0,showImages:!1,resetStyles:!1}),setTimeout(()=>e?.querySelector(`input`)?.focus(),60)},document.body.appendChild(r)}}function r(){e?.classList.remove(`open`)}document.querySelectorAll(`[data-search-open]`).forEach(e=>e.addEventListener(`click`,n)),e?.addEventListener(`click`,t=>{t.target===e&&r()}),document.addEventListener(`keydown`,e=>{e.key===`/`&&!/input|textarea/i.test(e.target?.tagName||``)&&(e.preventDefault(),n()),e.key===`Escape`&&r()});</script><script type="module">var e=document.querySelectorAll(`.reveal`);if(`IntersectionObserver`in window&&e.length){let t=new IntersectionObserver(e=>{for(let n of e)n.isIntersecting&&(n.target.classList.add(`in`),t.unobserve(n.target))},{threshold:.12,rootMargin:`0px 0px -8% 0px`});e.forEach(e=>t.observe(e)),setTimeout(()=>e.forEach(e=>e.classList.add(`in`)),1600)}else e.forEach(e=>e.classList.add(`in`));</script></body></html>

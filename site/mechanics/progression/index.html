@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><script>document.documentElement.classList.add('js');</script><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>Progression · SEVERMORE</title><meta name="description" content="A per-run skill tree you lose on death, a permanent account layer that never sunsets, and a hard ~1.8× power cap where skill decides the rest."><meta property="og:title" content="Progression · SEVERMORE"><meta property="og:description" content="A per-run skill tree you lose on death, a permanent account layer that never sunsets, and a hard ~1.8× power cap where skill decides the rest."><meta property="og:image" content="https://severmore-assets.ironops.xyz/assets/in-engine/ui-reclass.png"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#06080f"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/BaseLayout.B90kDS6L.css"></head><body><nav class="nav"><div class="nav-inner"><a class="brand" href="/" aria-label="SEVERMORE home"><span class="mark"></span><b>SEVERMORE</b></a><button class="nav-toggle" aria-label="Toggle menu" data-nav-toggle>☰</button><div class="nav-links" data-nav-links><a href="/lore" class>Lore</a><a href="/zones" class>Zones</a><a href="/classes" class>Classes</a><a href="/mechanics" class="active">Mechanics</a><a href="/economy" class>Economy</a><a href="/bestiary" class>Bestiary</a><a href="/endgame" class>Endgame</a><a href="/gallery" class>Gallery</a><a href="/status" class>Status</a><button class="nav-search-btn" data-search-open><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg><span class="lbl">Search</span><kbd>/</kbd></button></div></div></nav><script type="module">var e=document.querySelector(`[data-nav-toggle]`),t=document.querySelector(`[data-nav-links]`);e?.addEventListener(`click`,()=>t?.classList.toggle(`open`));</script><main><header class="entry-hero"><div class="bg" style="background-image:url('https://severmore-assets.ironops.xyz/assets/in-engine/ui-reclass.png')"></div><div class="veil"></div><div class="inner"><a class="backlink" href="/mechanics">← Mechanics</a><p class="kicker gold" style="margin-top:14px">Systems</p><h1 class="gradient-text">Progression</h1><p class="lede">A per-run skill tree you lose on death, a permanent account layer that never sunsets, and a hard ~1.8× power cap where skill decides the rest.</p></div></header><div class="wrap"><div class="entry-grid"><aside class="toc"><div class="toc-h">On this page</div><a href="#_top" class="active">Progression</a><a href="#skill-over-gear--the-core-principle">Skill Over Gear — The Core Principle</a><a href="#the-full-progression-web">The Full Progression Web</a><a href="#the-coherent-web">The Coherent Web</a><div style="margin-top:22px" class="source-tag">Source: docs/spec/FOUNDATION-DECISIONS.md, docs/spec/SKILL-TREE.md</div></aside><article class="prose" id="_top"><h2 id="skill-over-gear--the-core-principle">Skill Over Gear — The Core Principle</h2>
+<p>The bounded power gap is the structural heart of Severmore. A fully geared, fully progressed character is roughly <strong>1.8× more effective than a fresh character</strong> — no more. A skilled player who reads bullets and positions well beats an unskilled player with better gear. This ceiling is enforced by a hard stat-max clamp on all equipped items and is verified continuously by the balance simulation oracle.</p>
+<h2 id="the-full-progression-web">The Full Progression Web</h2>
+<p>Progression splits cleanly between what you build during a run and what survives death permanently.</p>
+<h3 id="per-run-the-skill-tree-lost-on-death">Per-Run: The Skill Tree (lost on death)</h3>
+<p>Each run, your character earns <strong>Skill Shards</strong> from boss and dungeon kills. These are soulbound on drop — they cannot be traded, bought, or inherited from another character. They buy picks in your skill tree.</p>
+<p>The tree is a <strong>3-path × 6-row lattice</strong> tied to your equipped ability item. You pick exactly one node per row, for a maximum of 6 picks. Every row is a forced tradeoff between three options.</p>
+<p><strong>Node types:</strong></p>
+<ul>
+<li><strong>Tradeoff tweaks</strong> — bend two stats in opposite directions (cheaper to cast but weaker, or more expensive but harder-hitting).</li>
+<li><strong>Behavior rewrites</strong> — change <em>how</em> the ability works entirely, not just how hard it hits. A new playstyle in the same slot.</li>
+<li><strong>Capstones (row 6)</strong> — the build-defining ultimate pick. The biggest behavior swing in the tree.</li>
+</ul>
+<p>No node is a flat “+X% damage” upgrade. Every node must have a real downside or an opportunity cost. The balance oracle flags any node that out-performs across contexts and it gets adjusted before release. <strong>OPEN</strong>: all 180 node names across five classes are taste picks pending Jay’s decision.</p>
+<p>Skill Shards drop fast enough that a focused boss-killing session fills a tree. A tree is meant to be rebuilt often — it is a run investment, not an account grind.</p>
+<p><strong>Respec</strong> is free at the Rig workbench. The picks reset; the Shards themselves die with the character.</p>
+<h3 id="account-layer-what-always-survives">Account Layer: What Always Survives</h3>
+<p>These never reset on death and are what “never sunset earned content” applies to:</p>
+<p><strong>Wealth (Tokens)</strong> — your currency balance persists forever. The Auction House moves earned power between players; the market is liquid because the account layer holds wealth.</p>
+<p><strong>Collection Log</strong> — every item species, enemy, biome, and rare variant you have ever recovered is logged. Shinies get their own separate checkmark. Rewards are cosmetic and QoL only: borders, titles, a Nexus statue, dye. Never power, never loot-rate bonuses.</p>
+<p><strong>Class Mastery</strong> — a long per-class track of cosmetic unlocks (borders, titles, flair). Infinite chase with zero raw power. Stays safe against the skill&gt;gear principle by design.</p>
+<p><strong>Exaltations (proposed name: Imprints)</strong> — a small permanent per-class stat bonus earned from contribution-gated endgame dungeon completions. Fully Imprinted represents the <strong>reserved final ~5% of the 1.8× power budget</strong> — a fresh-maxed character at perfect gear reaches roughly 1.71×; full Imprints bring the ceiling to exactly 1.80×, no further. Each stat axis is clamped at approximately +3% of the class maximum. These survive death; a class you keep playing keeps accumulating them even after characters die. <strong>OPEN</strong>: final name (“Imprints” is a candidate Jay has not confirmed).</p>
+<p><strong>Prestige Stars</strong> — an account-rank ladder visible to other players. Pure status and flex, no power. Unlocked by class-quest fame thresholds per class; completing all classes reaches an apex rank. At most, cosmetic QoL gates (an extra vault tab, Nexus visual) — never stats.</p>
+<h2 id="the-coherent-web">The Coherent Web</h2>
+<p>The full picture at maximum progression:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Persists death?</th>
+<th>Power?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Skill tree picks</td>
+<td>No — lost every death</td>
+<td>Yes — meaningful per-run investment</td>
+</tr>
+<tr>
+<td>Gear / items (carried)</td>
+<td>No — lost on death</td>
+<td>Yes — bounded by the 1.8× clamp</td>
+</tr>
+<tr>
+<td>Gear / items (vaulted)</td>
+<td>Yes</td>
+<td>Yes — as above</td>
+</tr>
+<tr>
+<td>Exaltations / Imprints</td>
+<td>Yes</td>
+<td>Yes — the final 5% of the budget</td>
+</tr>
+<tr>
+<td>Wealth, collection log, class mastery, prestige stars</td>
+<td>Yes</td>
+<td>No — cosmetic and status only</td>
+</tr>
+</tbody>
+</table>
+<p>“Never sunset earned content” means the account layer. The per-run tree’s loss is the point of permadeath — you feel it, and that tension is what makes each dive matter.</p>
+<nav class="pager"><a href="/mechanics/loot-and-items"><div class="dir">← Previous</div><div class="ttl">Loot and Items</div></a><a class="next" href="/mechanics/the-rig"><div class="dir">Next →</div><div class="ttl">The Rig</div></a></nav></article></div></div><script type="module">var e=Array.from(document.querySelectorAll(`.toc a`)),t=new Map;e.forEach(e=>{let n=e.getAttribute(`href`)?.replace(`#`,``);n&&t.set(n,e)});var n=Array.from(document.querySelectorAll(`.prose h2[id], .prose h3[id]`));if(n.length){let r=new IntersectionObserver(n=>{for(let r of n)r.isIntersecting&&(e.forEach(e=>e.classList.remove(`active`)),t.get(r.target.id)?.classList.add(`active`))},{rootMargin:`-12% 0px -70% 0px`});n.forEach(e=>r.observe(e))}</script></main><footer class="footer"><div class="footer-inner"><div><div class="f-brand">SEVERMORE</div><p>A 2.5D top-down permadeath bullet-hell MMO with an EVE-grade player-driven economy, set in the AI / PRIME world. This codex is a curated, read-only record of the current canon — open questions are marked <strong>OPEN</strong>, not resolved here.</p></div><div class="f-col"><h4>Codex</h4><a href="/lore">Lore</a><a href="/zones">Zones</a><a href="/classes">Classes</a><a href="/mechanics">Mechanics</a><a href="/gallery">Concept Art</a></div><div class="f-col"><h4>More</h4><a href="/economy">Economy</a><a href="/bestiary">Bestiary</a><a href="/endgame">Endgame</a><a href="/status">Build Status</a><a href="https://severmore-assets.ironops.xyz">Asset Hub ↗</a><a href="https://severmore.ironops.xyz">The Exchange ↗</a></div></div><div class="f-base"><span>SEVERMORE codex · the canon, illustrated · built from the design bible</span><span>Working title · trademark pending · © the dev</span></div></footer><div class="search-modal" data-search-modal><div class="search-box"><div class="sb-head"><span>Search the Codex</span><span>Esc to close</span></div><div class="sb-body"><div id="pagefind-search"></div></div></div></div><script type="module">var e=document.querySelector(`[data-search-modal]`),t=!1;function n(){if(e?.classList.add(`open`),t)setTimeout(()=>e?.querySelector(`input`)?.focus(),30);else{t=!0;let n=document.createElement(`link`);n.rel=`stylesheet`,n.href=`/pagefind/pagefind-ui.css`,document.head.appendChild(n);let r=document.createElement(`script`);r.src=`/pagefind/pagefind-ui.js`,r.onload=()=>{new window.PagefindUI({element:`#pagefind-search`,showSubResults:!0,showImages:!1,resetStyles:!1}),setTimeout(()=>e?.querySelector(`input`)?.focus(),60)},document.body.appendChild(r)}}function r(){e?.classList.remove(`open`)}document.querySelectorAll(`[data-search-open]`).forEach(e=>e.addEventListener(`click`,n)),e?.addEventListener(`click`,t=>{t.target===e&&r()}),document.addEventListener(`keydown`,e=>{e.key===`/`&&!/input|textarea/i.test(e.target?.tagName||``)&&(e.preventDefault(),n()),e.key===`Escape`&&r()});</script><script type="module">var e=document.querySelectorAll(`.reveal`);if(`IntersectionObserver`in window&&e.length){let t=new IntersectionObserver(e=>{for(let n of e)n.isIntersecting&&(n.target.classList.add(`in`),t.unobserve(n.target))},{threshold:.12,rootMargin:`0px 0px -8% 0px`});e.forEach(e=>t.observe(e)),setTimeout(()=>e.forEach(e=>e.classList.add(`in`)),1600)}else e.forEach(e=>e.classList.add(`in`));</script></body></html>

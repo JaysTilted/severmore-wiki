@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><script>document.documentElement.classList.add('js');</script><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>Trading · SEVERMORE</title><meta name="description" content="How to buy, sell, and craft — the full market loop from loot drop to equipped upgrade."><meta property="og:title" content="Trading · SEVERMORE"><meta property="og:description" content="How to buy, sell, and craft — the full market loop from loot drop to equipped upgrade."><meta property="og:image" content="https://severmore-assets.ironops.xyz/assets/in-engine/ui-market.png"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#06080f"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/BaseLayout.B90kDS6L.css"></head><body><nav class="nav"><div class="nav-inner"><a class="brand" href="/" aria-label="SEVERMORE home"><span class="mark"></span><b>SEVERMORE</b></a><button class="nav-toggle" aria-label="Toggle menu" data-nav-toggle>☰</button><div class="nav-links" data-nav-links><a href="/lore" class>Lore</a><a href="/zones" class>Zones</a><a href="/classes" class>Classes</a><a href="/mechanics" class>Mechanics</a><a href="/economy" class="active">Economy</a><a href="/bestiary" class>Bestiary</a><a href="/endgame" class>Endgame</a><a href="/gallery" class>Gallery</a><a href="/status" class>Status</a><button class="nav-search-btn" data-search-open><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg><span class="lbl">Search</span><kbd>/</kbd></button></div></div></nav><script type="module">var e=document.querySelector(`[data-nav-toggle]`),t=document.querySelector(`[data-nav-links]`);e?.addEventListener(`click`,()=>t?.classList.toggle(`open`));</script><main><header class="entry-hero"><div class="bg" style="background-image:url('https://severmore-assets.ironops.xyz/assets/in-engine/ui-market.png')"></div><div class="veil"></div><div class="inner"><a class="backlink" href="/economy">← Economy</a><p class="kicker gold" style="margin-top:14px">The Exchange</p><h1 class="gradient-text">Trading</h1><p class="lede">How to buy, sell, and craft — the full market loop from loot drop to equipped upgrade.</p></div></header><div class="wrap"><div class="entry-grid"><aside class="toc"><div class="toc-h">On this page</div><a href="#_top" class="active">Trading</a><a href="#the-exchange-buying-and-selling">The Exchange: Buying and Selling</a><a href="#the-workbench-crush-and-upgrade">The Workbench: Crush and Upgrade</a><a href="#p2p-direct-trade">P2P Direct Trade</a><a href="#sinks-and-faucets-at-a-glance">Sinks and Faucets at a Glance</a><a href="#rwt-guardrails">RWT Guardrails</a><div style="margin-top:22px" class="source-tag">Source: docs/spec/ECONOMY.md, docs/spec/ECONOMY-AFK-AND-CLASSES.md, docs/spec/THE-RIG.md</div></aside><article class="prose" id="_top"><p>Trading in Severmore flows through two surfaces: <strong>The Exchange</strong> (the global order-book auction house in the Nexus) and the <strong>Workbench</strong> (the crush-and-upgrade crafting station at your Rig). Between them, every Token and every item in the game has a documented path in and a documented path out.</p>
+<h2 id="the-exchange-buying-and-selling">The Exchange: Buying and Selling</h2>
+<p>The Exchange is accessed from the Nexus hub. The market UI surfaces the <strong>best bid</strong> (highest buy offer), the <strong>best ask</strong> (lowest sell offer), and a quantity field. Full order-book depth is available for players who want it.</p>
+<h3 id="selling-an-item">Selling an Item</h3>
+<ol>
+<li>Choose the item from your inventory, enter a sell price in Tokens, confirm.</li>
+<li>The item is escrowed to the MARKET account immediately — it is removed from your inventory and locked.</li>
+<li>Your SELL order rests on the book until a buyer fills it (at your price or better) or you cancel.</li>
+<li>On a fill: Tokens arrive in your wallet minus the broker fee (~3%). If you are offline, the Tokens credit directly; you will see the balance when you next log in.</li>
+</ol>
+<h3 id="buying-an-item">Buying an Item</h3>
+<ol>
+<li>Browse the book for your item type, enter a bid price and quantity, confirm.</li>
+<li>Tokens are escrowed from your wallet immediately — the bid amount is locked against your order.</li>
+<li>If a resting SELL exists at or below your price, the trade fills instantly. Otherwise, your BUY order rests until a seller lists at your price or lower.</li>
+<li>On a fill: the item appears in your inventory (or your delivery inbox if the fill happens while you are offline). Claim from the inbox at any Exchange terminal.</li>
+</ol>
+<p><strong>Partial fills:</strong> you do not need to buy or sell in exact round lots. A BUY for 10 items fills 3 if only 3 are available, leaving the order open for the remaining 7.</p>
+<p><strong>Canceling:</strong> cancels return the escrowed item or Tokens in a single atomic transaction. No delay, no fee on cancel.</p>
+<h2 id="the-workbench-crush-and-upgrade">The Workbench: Crush and Upgrade</h2>
+<p>The Workbench is at your personal Rig, reached via a door off the Nexus. It is not a market — it is where you convert surplus loot into progression fuel.</p>
+<h3 id="crush">Crush</h3>
+<p>Dismantle any gear item at the Workbench to receive <strong>Compute Scrap</strong> in return. The Scrap yield scales with the item’s rarity and band. Crushing destroys the item permanently (it becomes the SINK account’s property in the ledger). This is the economy’s primary item-sink: it removes gear from circulation while producing the resource that powers upgrades and The Rig.</p>
+<h3 id="upgrade">Upgrade</h3>
+<p>Spend Compute Scrap plus a <strong>mix of server parts</strong> to upgrade an item one band and reroll its modifiers within bounded ranges. The upgrade is irreversible and consumes all inputs.</p>
+<p>Recipes require parts from multiple biome tiers — a mid-band upgrade needs both T1 and T2 parts; a top-band upgrade needs T2 and T3 (GPU, deep-biome only). This ensures that every biome stays relevant for crafters at every stage of progression.</p>
+<p>Upgrade examples (illustrative — exact quantities are sim-tunable):</p>
+<ul>
+<li><strong>Low-band:</strong> Compute Scrap + Copper Wire + Cooling Fans</li>
+<li><strong>Mid-band:</strong> Compute Scrap + RAM Stick + Motherboard + Storage Drive</li>
+<li><strong>Top-band:</strong> Compute Scrap + CPU/Cores + GPU</li>
+</ul>
+<p>The apex tier (Pristine) is primarily craft-gated: the reliable path to maximum gear consumes lower-band items and Exotic parts (GPU, Quantum Core), making the top tier itself a deep economy drain.</p>
+<h2 id="p2p-direct-trade">P2P Direct Trade</h2>
+<p>Direct player-to-player trade is supported alongside The Exchange. Both players lock their offered items and Tokens into escrow, both confirm, and then a single atomic transaction swaps ownership. There is no “trust trade” window where a last-instant item switch is possible.</p>
+<blockquote>
+<p><strong>OPEN:</strong> P2P direct trade is parked for post-MVP. Version 1 ships with The Exchange only.</p>
+</blockquote>
+<h2 id="sinks-and-faucets-at-a-glance">Sinks and Faucets at a Glance</h2>
+<table>
+<thead>
+<tr>
+<th>Faucets (currency enters)</th>
+<th>Sinks (currency leaves)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Loot and parts sold on The Exchange</td>
+<td>Broker fee on every fill (~3%)</td>
+</tr>
+<tr>
+<td>NPC payouts, contracts, quest rewards</td>
+<td>Crafting: Compute Scrap + parts consumed</td>
+</tr>
+<tr>
+<td>The Rig’s capped idle mining generator</td>
+<td>Item upgrades (irreversible part and Scrap burn)</td>
+</tr>
+<tr>
+<td></td>
+<td>Apex craft-gate (consumes lower-band items)</td>
+</tr>
+<tr>
+<td></td>
+<td>Extra Vault tabs, Rig upgrades, respec</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The idle faucet is deliberately small.</strong> The Rig’s mining output caps quickly and slows over time. Active diving out-earns a day of idling. Idle is a floor — a reason to log in — not an engine that replaces play.</p>
+<p><strong>Wealth buys bounded power, not unbounded dominance.</strong> The Exchange moves earned items between players; it does not mint them. A rich player reaches the gear ceiling faster. That ceiling is fixed and the skill requirement is not. Wealth is convenience, not dominance.</p>
+<h2 id="rwt-guardrails">RWT Guardrails</h2>
+<p>Severmore does not operate or endorse real-world trading. The design makes it structurally pointless: items trade freely at fair market prices inside the game, so there is no friction for off-platform bridges to undercut. Every trade is logged in an audit graph; one-sided wealth transfers, impossible-price trades, and new-account funneling are all detectable patterns. New accounts carry trade velocity limits as an additional guardrail.</p>
+<blockquote>
+<p><strong>OPEN:</strong> exact P2P trade caps and new-account limit numbers are post-MVP tuning, pending live data.</p>
+</blockquote>
+<nav class="pager"><a href="/economy/currencies"><div class="dir">← Previous</div><div class="ttl">Currencies</div></a><span></span></nav></article></div></div><script type="module">var e=Array.from(document.querySelectorAll(`.toc a`)),t=new Map;e.forEach(e=>{let n=e.getAttribute(`href`)?.replace(`#`,``);n&&t.set(n,e)});var n=Array.from(document.querySelectorAll(`.prose h2[id], .prose h3[id]`));if(n.length){let r=new IntersectionObserver(n=>{for(let r of n)r.isIntersecting&&(e.forEach(e=>e.classList.remove(`active`)),t.get(r.target.id)?.classList.add(`active`))},{rootMargin:`-12% 0px -70% 0px`});n.forEach(e=>r.observe(e))}</script></main><footer class="footer"><div class="footer-inner"><div><div class="f-brand">SEVERMORE</div><p>A 2.5D top-down permadeath bullet-hell MMO with an EVE-grade player-driven economy, set in the AI / PRIME world. This codex is a curated, read-only record of the current canon — open questions are marked <strong>OPEN</strong>, not resolved here.</p></div><div class="f-col"><h4>Codex</h4><a href="/lore">Lore</a><a href="/zones">Zones</a><a href="/classes">Classes</a><a href="/mechanics">Mechanics</a><a href="/gallery">Concept Art</a></div><div class="f-col"><h4>More</h4><a href="/economy">Economy</a><a href="/bestiary">Bestiary</a><a href="/endgame">Endgame</a><a href="/status">Build Status</a><a href="https://severmore-assets.ironops.xyz">Asset Hub ↗</a><a href="https://severmore.ironops.xyz">The Exchange ↗</a></div></div><div class="f-base"><span>SEVERMORE codex · the canon, illustrated · built from the design bible</span><span>Working title · trademark pending · © the dev</span></div></footer><div class="search-modal" data-search-modal><div class="search-box"><div class="sb-head"><span>Search the Codex</span><span>Esc to close</span></div><div class="sb-body"><div id="pagefind-search"></div></div></div></div><script type="module">var e=document.querySelector(`[data-search-modal]`),t=!1;function n(){if(e?.classList.add(`open`),t)setTimeout(()=>e?.querySelector(`input`)?.focus(),30);else{t=!0;let n=document.createElement(`link`);n.rel=`stylesheet`,n.href=`/pagefind/pagefind-ui.css`,document.head.appendChild(n);let r=document.createElement(`script`);r.src=`/pagefind/pagefind-ui.js`,r.onload=()=>{new window.PagefindUI({element:`#pagefind-search`,showSubResults:!0,showImages:!1,resetStyles:!1}),setTimeout(()=>e?.querySelector(`input`)?.focus(),60)},document.body.appendChild(r)}}function r(){e?.classList.remove(`open`)}document.querySelectorAll(`[data-search-open]`).forEach(e=>e.addEventListener(`click`,n)),e?.addEventListener(`click`,t=>{t.target===e&&r()}),document.addEventListener(`keydown`,e=>{e.key===`/`&&!/input|textarea/i.test(e.target?.tagName||``)&&(e.preventDefault(),n()),e.key===`Escape`&&r()});</script><script type="module">var e=document.querySelectorAll(`.reveal`);if(`IntersectionObserver`in window&&e.length){let t=new IntersectionObserver(e=>{for(let n of e)n.isIntersecting&&(n.target.classList.add(`in`),t.unobserve(n.target))},{threshold:.12,rootMargin:`0px 0px -8% 0px`});e.forEach(e=>t.observe(e)),setTimeout(()=>e.forEach(e=>e.classList.add(`in`)),1600)}else e.forEach(e=>e.classList.add(`in`));</script></body></html>
